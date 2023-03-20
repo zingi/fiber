@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1678870661514,
+  "lastUpdate": 1679297672241,
   "repoUrl": "https://github.com/gofiber/fiber",
   "entries": {
     "Benchmark": [
@@ -45638,6 +45638,960 @@ window.BENCHMARK_DATA = {
             "value": 54.63,
             "unit": "ns/op\t       0 B/op\t       0 allocs/op",
             "extra": "21882520 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "efectn@protonmail.com",
+            "name": "M. Efe Çetin",
+            "username": "efectn"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9064eb64692bc5adb058b2f8d302397c55010b30",
+          "message": ":broom: chore: drop go 1.16 support & update dependencies (#2374)\n\n* :broom: chore: drop go 1.16 support\r\n\r\n* downgrade uniseg\r\n\r\n* fix tests\r\n\r\n* fix tests\r\n\r\n* fix tests",
+          "timestamp": "2023-03-20T08:22:31+01:00",
+          "tree_id": "3ff8c2baa11c11d5f30f62f848b36f428de9b8c0",
+          "url": "https://github.com/gofiber/fiber/commit/9064eb64692bc5adb058b2f8d302397c55010b30"
+        },
+        "date": 1679297617795,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "Benchmark_AcquireCtx",
+            "value": 1560,
+            "unit": "ns/op\t    1568 B/op\t       5 allocs/op",
+            "extra": "917960 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_App_ETag",
+            "value": 3661,
+            "unit": "ns/op\t    1044 B/op\t       3 allocs/op",
+            "extra": "324427 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_App_ETag_Weak",
+            "value": 3779,
+            "unit": "ns/op\t    1068 B/op\t       4 allocs/op",
+            "extra": "311103 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Accepts",
+            "value": 146.7,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8187249 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_AcceptsCharsets",
+            "value": 58.6,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "20360620 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_AcceptsEncodings",
+            "value": 79.88,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "14983036 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_AcceptsLanguages",
+            "value": 60.35,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "17702815 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Append",
+            "value": 248.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "4816407 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Attachment",
+            "value": 249.5,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "4808877 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BaseURL",
+            "value": 2.284,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "527348084 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Body_With_Compression",
+            "value": 942.1,
+            "unit": "ns/op\t     144 B/op\t       7 allocs/op",
+            "extra": "1270366 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BodyParser_JSON",
+            "value": 757.5,
+            "unit": "ns/op\t     240 B/op\t       6 allocs/op",
+            "extra": "1584583 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BodyParser_XML",
+            "value": 2618,
+            "unit": "ns/op\t    1160 B/op\t      24 allocs/op",
+            "extra": "435295 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BodyParser_Form",
+            "value": 1394,
+            "unit": "ns/op\t     360 B/op\t      13 allocs/op",
+            "extra": "782086 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BodyParser_MultipartForm",
+            "value": 1235,
+            "unit": "ns/op\t     328 B/op\t      12 allocs/op",
+            "extra": "886777 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Cookie",
+            "value": 118.7,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10263142 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Format",
+            "value": 141.8,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8419053 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Format_HTML",
+            "value": 125.7,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "9453703 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Format_JSON",
+            "value": 307.7,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "3878234 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Format_XML",
+            "value": 1864,
+            "unit": "ns/op\t    4480 B/op\t       7 allocs/op",
+            "extra": "600057 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Fresh_StaleEtag",
+            "value": 570,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "2122248 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Fresh_WithNoCache",
+            "value": 133.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "9029602 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IPs",
+            "value": 147.1,
+            "unit": "ns/op\t      48 B/op\t       1 allocs/op",
+            "extra": "8076236 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IPs_v6",
+            "value": 226.4,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "5284609 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IPs_With_IP_Validation",
+            "value": 209,
+            "unit": "ns/op\t      48 B/op\t       1 allocs/op",
+            "extra": "5729178 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IPs_v6_With_IP_Validation",
+            "value": 398.1,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3021952 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IP_With_ProxyHeader",
+            "value": 42.94,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "27953564 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IP_With_ProxyHeader_and_IP_Validation",
+            "value": 86.59,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "13901556 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_IP",
+            "value": 41.94,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "27401616 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Is",
+            "value": 49.24,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "24511980 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_MultipartForm",
+            "value": 727.5,
+            "unit": "ns/op\t      48 B/op\t       4 allocs/op",
+            "extra": "1590657 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Params",
+            "value": 72.25,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "16541906 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_AllParams",
+            "value": 297.6,
+            "unit": "ns/op\t     336 B/op\t       2 allocs/op",
+            "extra": "4041356 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_ParamsParse",
+            "value": 4269,
+            "unit": "ns/op\t     816 B/op\t      39 allocs/op",
+            "extra": "270918 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Protocol",
+            "value": 14.49,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "83131594 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Subdomains",
+            "value": 143.1,
+            "unit": "ns/op\t      64 B/op\t       1 allocs/op",
+            "extra": "8317785 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_JSON",
+            "value": 287.5,
+            "unit": "ns/op\t      56 B/op\t       2 allocs/op",
+            "extra": "4187752 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_JSONP",
+            "value": 397.2,
+            "unit": "ns/op\t      56 B/op\t       2 allocs/op",
+            "extra": "3018704 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_XML",
+            "value": 2226,
+            "unit": "ns/op\t    4600 B/op\t      10 allocs/op",
+            "extra": "494637 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Links",
+            "value": 141,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8361114 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_RenderWithLocalsAndBinding",
+            "value": 1181,
+            "unit": "ns/op\t     448 B/op\t       7 allocs/op",
+            "extra": "887518 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_RedirectToRoute",
+            "value": 238,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "5042878 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_RedirectToRouteWithQueries",
+            "value": 735.7,
+            "unit": "ns/op\t     376 B/op\t       4 allocs/op",
+            "extra": "1633149 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_RenderLocals",
+            "value": 784.3,
+            "unit": "ns/op\t     416 B/op\t       5 allocs/op",
+            "extra": "1526372 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_RenderBind",
+            "value": 779.9,
+            "unit": "ns/op\t     416 B/op\t       5 allocs/op",
+            "extra": "1548162 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Render_Engine",
+            "value": 765.7,
+            "unit": "ns/op\t     416 B/op\t       5 allocs/op",
+            "extra": "1573822 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Get_Location_From_Route",
+            "value": 182.9,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "6530997 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Send",
+            "value": 5.322,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "225227118 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Set",
+            "value": 56.91,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "21145760 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Type",
+            "value": 43.41,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "27825297 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Type_Charset",
+            "value": 104.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "11772219 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Vary",
+            "value": 114.5,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10382263 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Write",
+            "value": 41.12,
+            "unit": "ns/op\t      70 B/op\t       0 allocs/op",
+            "extra": "33328177 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_Writef",
+            "value": 156.4,
+            "unit": "ns/op\t      95 B/op\t       1 allocs/op",
+            "extra": "7751666 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_XHR",
+            "value": 55.05,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "21636922 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_SendString_B",
+            "value": 9.355,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "128159475 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_QueryParser",
+            "value": 3861,
+            "unit": "ns/op\t     856 B/op\t      38 allocs/op",
+            "extra": "293284 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_parseQuery",
+            "value": 3323,
+            "unit": "ns/op\t     752 B/op\t      29 allocs/op",
+            "extra": "344101 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_QueryParser_Comma",
+            "value": 4225,
+            "unit": "ns/op\t     928 B/op\t      44 allocs/op",
+            "extra": "275808 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_ReqHeaderParser",
+            "value": 4386,
+            "unit": "ns/op\t     928 B/op\t      44 allocs/op",
+            "extra": "263893 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Ctx_BodyStreamWriter",
+            "value": 1260,
+            "unit": "ns/op\t     810 B/op\t       8 allocs/op",
+            "extra": "1000000 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Utils_ETag",
+            "value": 3809,
+            "unit": "ns/op\t    1044 B/op\t       3 allocs/op",
+            "extra": "312691 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Utils_ETag_Weak",
+            "value": 3871,
+            "unit": "ns/op\t    1068 B/op\t       4 allocs/op",
+            "extra": "303001 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Utils_getGroupPath",
+            "value": 155,
+            "unit": "ns/op\t      96 B/op\t       2 allocs/op",
+            "extra": "7520938 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Utils_Unescape",
+            "value": 51.38,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "23737304 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Utils_IsNoCache",
+            "value": 58.08,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "20829804 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_SlashRecognition/indexBytes",
+            "value": 4.05,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "298166127 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_SlashRecognition/forEach",
+            "value": 7.345,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "158996316 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_SlashRecognition/IndexRune",
+            "value": 5.809,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "210283213 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_App_MethodNotAllowed",
+            "value": 968.8,
+            "unit": "ns/op\t      80 B/op\t       3 allocs/op",
+            "extra": "1253668 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_NotFound",
+            "value": 919.4,
+            "unit": "ns/op\t      80 B/op\t       3 allocs/op",
+            "extra": "1294494 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Handler",
+            "value": 162.6,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "7328480 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Handler_Strict_Case",
+            "value": 150.4,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8024132 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Chain",
+            "value": 628.7,
+            "unit": "ns/op\t      48 B/op\t       3 allocs/op",
+            "extra": "1905530 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_WithCompression",
+            "value": 627.5,
+            "unit": "ns/op\t      48 B/op\t       3 allocs/op",
+            "extra": "1911188 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Startup_Process",
+            "value": 742332,
+            "unit": "ns/op\t  372998 B/op\t    5608 allocs/op",
+            "extra": "1599 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Next",
+            "value": 91.66,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "13019246 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Route_Match",
+            "value": 25.72,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "46805406 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Route_Match_Star",
+            "value": 3.304,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "372897658 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Route_Match_Root",
+            "value": 2.779,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "433257260 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Handler_CaseSensitive",
+            "value": 149.6,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "7992061 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Handler_Unescape",
+            "value": 207.3,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "5872575 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Handler_StrictRouting",
+            "value": 149.4,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8000454 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Router_Github_API",
+            "value": 248378,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "4746 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Memory/fiber_memory",
+            "value": 228628,
+            "unit": "ns/op\t   24595 B/op\t    1000 allocs/op",
+            "extra": "5182 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Storage_Memory/fiber_memory",
+            "value": 178436,
+            "unit": "ns/op\t     740 B/op\t       0 allocs/op",
+            "extra": "6625 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Middleware_BasicAuth",
+            "value": 482.9,
+            "unit": "ns/op\t      80 B/op\t       5 allocs/op",
+            "extra": "2490266 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Middleware_BasicAuth_Upper",
+            "value": 484.4,
+            "unit": "ns/op\t      80 B/op\t       5 allocs/op",
+            "extra": "2475248 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache",
+            "value": 424.8,
+            "unit": "ns/op\t      16 B/op\t       2 allocs/op",
+            "extra": "2813532 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache_Storage",
+            "value": 813.5,
+            "unit": "ns/op\t     176 B/op\t       5 allocs/op",
+            "extra": "1478152 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache_AdditionalHeaders",
+            "value": 542.6,
+            "unit": "ns/op\t      16 B/op\t       2 allocs/op",
+            "extra": "2212245 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache_MaxSize/Disabled",
+            "value": 1843,
+            "unit": "ns/op\t     313 B/op\t       7 allocs/op",
+            "extra": "814711 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache_MaxSize/Unlim",
+            "value": 2101,
+            "unit": "ns/op\t     585 B/op\t       7 allocs/op",
+            "extra": "770864 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Cache_MaxSize/LowBounded",
+            "value": 1470,
+            "unit": "ns/op\t     231 B/op\t       7 allocs/op",
+            "extra": "861522 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Middleware_CSRF_Check",
+            "value": 1798,
+            "unit": "ns/op\t     354 B/op\t       5 allocs/op",
+            "extra": "878964 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Middleware_CSRF_GenerateToken",
+            "value": 1890,
+            "unit": "ns/op\t     342 B/op\t       5 allocs/op",
+            "extra": "928825 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Etag",
+            "value": 122.3,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "9959613 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Middleware_Favicon",
+            "value": 104.9,
+            "unit": "ns/op\t       3 B/op\t       1 allocs/op",
+            "extra": "10791397 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkMarshalMsgresponse",
+            "value": 48.88,
+            "unit": "ns/op\t      32 B/op\t       1 allocs/op",
+            "extra": "23941808 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkAppendMsgresponse",
+            "value": 20.03,
+            "unit": "ns/op\t 649.18 MB/s\t       0 B/op\t       0 allocs/op",
+            "extra": "59897425 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkUnmarshalresponse",
+            "value": 43.89,
+            "unit": "ns/op\t 296.18 MB/s\t       0 B/op\t       0 allocs/op",
+            "extra": "27276315 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Idempotency/hit",
+            "value": 706.9,
+            "unit": "ns/op\t     432 B/op\t       5 allocs/op",
+            "extra": "1695016 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Idempotency/skip",
+            "value": 140.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8569448 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Limiter_Custom_Store",
+            "value": 482.1,
+            "unit": "ns/op\t      72 B/op\t       2 allocs/op",
+            "extra": "2484153 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Limiter",
+            "value": 322.7,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "3749384 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Logger/Base",
+            "value": 372.9,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3196860 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Logger/DefaultFormat",
+            "value": 697.8,
+            "unit": "ns/op\t      15 B/op\t       1 allocs/op",
+            "extra": "1740216 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Logger/WithTagParameter",
+            "value": 419.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "2862699 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Monitor",
+            "value": 784.6,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "1526432 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Session/default",
+            "value": 23175,
+            "unit": "ns/op\t    8534 B/op\t     207 allocs/op",
+            "extra": "51422 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Session/storage",
+            "value": 23009,
+            "unit": "ns/op\t    8534 B/op\t     207 allocs/op",
+            "extra": "51640 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToLowerBytes/fiber",
+            "value": 65.89,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "18178908 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToLowerBytes/default",
+            "value": 139.9,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "8629712 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToUpperBytes/fiber",
+            "value": 41.33,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "29037547 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToUpperBytes/default",
+            "value": 155,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "7663867 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimRightBytes/fiber",
+            "value": 19.47,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "56271837 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimRightBytes/default",
+            "value": 20.65,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "54604638 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimLeftBytes/fiber",
+            "value": 19.19,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "57439484 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimLeftBytes/default",
+            "value": 21.96,
+            "unit": "ns/op\t       8 B/op\t       1 allocs/op",
+            "extra": "51620767 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimBytes/fiber",
+            "value": 28.62,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "40106716 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimBytes/default",
+            "value": 29.55,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "38624108 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_EqualFoldBytes/fiber",
+            "value": 96.43,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "12442254 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_EqualFoldBytes/default",
+            "value": 116.8,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10280935 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UUID/fiber",
+            "value": 64.65,
+            "unit": "ns/op\t      48 B/op\t       1 allocs/op",
+            "extra": "18088533 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UUID/default",
+            "value": 456.7,
+            "unit": "ns/op\t     168 B/op\t       6 allocs/op",
+            "extra": "2627931 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ConvertToBytes/fiber",
+            "value": 32.36,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "37033743 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UnsafeString/unsafe",
+            "value": 0.8037,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UnsafeString/default",
+            "value": 25.04,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "42170557 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UnsafeBytes/unsafe",
+            "value": 1.61,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "745680621 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_UnsafeBytes/default",
+            "value": 32.09,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "35350276 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToString",
+            "value": 76.86,
+            "unit": "ns/op\t      40 B/op\t       2 allocs/op",
+            "extra": "15334111 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_GetMIME/fiber",
+            "value": 84.13,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "14278028 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_GetMIME/default",
+            "value": 147.8,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "8207037 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ParseVendorSpecificContentType/vendorContentType",
+            "value": 63.88,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "18502851 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ParseVendorSpecificContentType/defaultContentType",
+            "value": 8.039,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "149907595 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_StatusMessage/fiber",
+            "value": 1.206,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "995197293 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_StatusMessage/default",
+            "value": 4.019,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "298430168 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_IsIPv4/fiber",
+            "value": 26.51,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "45244659 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_IsIPv4/default",
+            "value": 68.91,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "17090078 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_IsIPv6/fiber",
+            "value": 103,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "11593676 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_IsIPv6/default",
+            "value": 141,
+            "unit": "ns/op\t      16 B/op\t       1 allocs/op",
+            "extra": "8202685 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToUpper/fiber",
+            "value": 103.7,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "11625511 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToUpper/default",
+            "value": 350.1,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "3341317 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToLower/fiber",
+            "value": 82.36,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "14502454 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_ToLower/default",
+            "value": 297.4,
+            "unit": "ns/op\t      80 B/op\t       1 allocs/op",
+            "extra": "4001704 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimRight/fiber",
+            "value": 3.272,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "369923392 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimRight/default",
+            "value": 4.742,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "253312216 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimLeft/fiber",
+            "value": 3.62,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "331301632 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_TrimLeft/default",
+            "value": 5.265,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "227419712 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Trim/fiber",
+            "value": 8.037,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "149110393 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_Trim/default",
+            "value": 9.171,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "130280949 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_EqualFold/fiber",
+            "value": 96.47,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "12413614 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_EqualFold/default",
+            "value": 116.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10325572 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_CalculateTimestamp/fiber",
+            "value": 0.4261,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n2 procs"
+          },
+          {
+            "name": "Benchmark_CalculateTimestamp/default",
+            "value": 54.73,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "21871210 times\n2 procs"
           }
         ]
       }
