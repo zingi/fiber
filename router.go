@@ -146,7 +146,7 @@ func (app *App) nextCustom(c CustomCtx) (bool, error) { //nolint: unparam // boo
 }
 
 func (app *App) next(c *DefaultCtx) (bool, error) {
-	app.mutex.Lock()
+	app.mutex.RLock()
 
 	// Get stack length
 	tree, ok := app.treeStack[c.methodINT][c.treePath]
@@ -154,7 +154,7 @@ func (app *App) next(c *DefaultCtx) (bool, error) {
 		tree = app.treeStack[c.methodINT][""]
 	}
 	lenTree := len(tree) - 1
-	app.mutex.Unlock()
+	app.mutex.RUnlock()
 
 	// Loop over the route stack starting from previous index
 	for c.indexRoute < lenTree {
@@ -381,7 +381,7 @@ func (app *App) addRoute(method string, route *Route, isMounted ...bool) {
 	app.mutex.Lock()
 	defer app.mutex.Unlock()
 
-	fmt.Printf("addRoute: method: %s, route: %v, isMounted: %v\n", method, route, isMounted)
+	//fmt.Printf("addRoute: method: %s, route: %v, isMounted: %v\n", method, route, isMounted)
 
 	// Check mounted routes
 	var mounted bool

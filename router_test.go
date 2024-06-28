@@ -595,6 +595,34 @@ func Benchmark_Router_Next(b *testing.B) {
 	require.Equal(b, 4, c.indexRoute)
 }
 
+func Benchmark_Router_Next_Parallel(b *testing.B) {
+	app := New()
+	registerDummyRoutes(app)
+	app.startupProcess()
+
+	request := &fasthttp.RequestCtx{}
+
+	request.Request.Header.SetMethod("DELETE")
+	request.URI().SetPath("/user/keys/1337")
+	var res bool
+	var err error
+
+	c := app.AcquireCtx(request).(*DefaultCtx) //nolint:errcheck, forcetypeassert // not needed
+
+	b.ResetTimer()
+
+	b.RunParallel(func(p *testing.PB) {
+		for p.Next() {
+			c.indexRoute = -1
+			res, err = app.next(c)
+		}
+	})
+
+	require.NoError(b, err)
+	require.True(b, res)
+	require.Equal(b, 4, c.indexRoute)
+}
+
 // go test -v ./... -run=^$ -bench=Benchmark_Route_Match -benchmem -count=4
 func Benchmark_Route_Match(b *testing.B) {
 	var match bool
