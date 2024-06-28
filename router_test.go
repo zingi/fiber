@@ -11,6 +11,9 @@ import (
 	"io"
 	"net/http/httptest"
 	"os"
+	"strconv"
+	"sync"
+	"sync/atomic"
 	"testing"
 
 	"github.com/gofiber/utils/v2"
@@ -366,6 +369,56 @@ func Test_Router_NotFound_HTML_Inject(t *testing.T) {
 
 	require.Equal(t, 404, c.Response.StatusCode())
 	require.Equal(t, "Cannot DELETE /does/not/exist&lt;script&gt;alert(&#39;foo&#39;);&lt;/script&gt;", string(c.Response.Body()))
+}
+
+func Test_App_BuildTree_Concurrent(t *testing.T) {
+	t.Parallel()
+	app := New()
+
+	var counter atomic.Uint64
+	var routerMu sync.Mutex
+	app.Get("/test", func(c Ctx) error {
+		routerMu.Lock()
+
+		cStr := strconv.FormatUint(counter.Load(), 10)
+		counter.Add(1)
+
+		app.Get("/test"+cStr, func(c Ctx) error {
+			return c.SendString("test" + cStr)
+		})
+
+		routerMu.Unlock()
+
+		app.BuildTree()
+
+		return c.SendStatus(StatusOK)
+	})
+
+	var wg sync.WaitGroup
+	wg.Add(4)
+	for i := 0; i < 4; i++ {
+		go func() {
+			defer wg.Done()
+			req := httptest.NewRequest(MethodGet, "/test", nil)
+			resp, err := app.Test(req)
+
+			require.NoError(t, err)
+			require.Equal(t, StatusOK, resp.StatusCode)
+		}()
+	}
+	wg.Wait()
+
+	for i := 0; i < 4; i++ {
+		req := httptest.NewRequest(MethodGet, "/test"+strconv.FormatInt(int64(i), 10), nil)
+		resp, err := app.Test(req)
+
+		require.NoError(t, err)
+		require.Equal(t, StatusOK, resp.StatusCode)
+
+		body, err := io.ReadAll(resp.Body)
+		require.NoError(t, err)
+		require.Equal(t, "test"+strconv.Itoa(i), app.getString(body))
+	}
 }
 
 //////////////////////////////////////////////

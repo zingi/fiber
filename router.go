@@ -146,12 +146,15 @@ func (app *App) nextCustom(c CustomCtx) (bool, error) { //nolint: unparam // boo
 }
 
 func (app *App) next(c *DefaultCtx) (bool, error) {
+	app.mutex.Lock()
+
 	// Get stack length
 	tree, ok := app.treeStack[c.methodINT][c.treePath]
 	if !ok {
 		tree = app.treeStack[c.methodINT][""]
 	}
 	lenTree := len(tree) - 1
+	app.mutex.Unlock()
 
 	// Loop over the route stack starting from previous index
 	for c.indexRoute < lenTree {
@@ -375,6 +378,11 @@ func (app *App) register(methods []string, pathRaw string, group *Group, handler
 }
 
 func (app *App) addRoute(method string, route *Route, isMounted ...bool) {
+	app.mutex.Lock()
+	defer app.mutex.Unlock()
+
+	fmt.Printf("addRoute: method: %s, route: %v, isMounted: %v\n", method, route, isMounted)
+
 	// Check mounted routes
 	var mounted bool
 	if len(isMounted) > 0 {
@@ -400,12 +408,12 @@ func (app *App) addRoute(method string, route *Route, isMounted ...bool) {
 
 	// Execute onRoute hooks & change latestRoute if not adding mounted route
 	if !mounted {
-		app.mutex.Lock()
+		//app.mutex.Lock()
 		app.latestRoute = route
 		if err := app.hooks.executeOnRouteHooks(*route); err != nil {
 			panic(err)
 		}
-		app.mutex.Unlock()
+		//app.mutex.Unlock()
 	}
 }
 
@@ -445,4 +453,14 @@ func (app *App) buildTree() *App {
 	app.routesRefreshed = false
 
 	return app
+}
+
+// BuildTree rebuilds the prefix tree from the previously registered routes.
+// This method is useful when you want to register routes dynamically after the app has started.
+// It is not recommended to use this method on produtcion environments because rebuilding the tree is performance-intensive.
+func (app *App) BuildTree() *App {
+	app.mutex.Lock()
+	defer app.mutex.Unlock()
+
+	return app.buildTree()
 }

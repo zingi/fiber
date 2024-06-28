@@ -86,7 +86,7 @@ type Error struct {
 
 // App denotes the Fiber application.
 type App struct {
-	mutex sync.Mutex
+	mutex sync.RWMutex
 	// Route stack divided by HTTP methods
 	stack [][]*Route
 	// Route stack divided by HTTP methods and route prefixes
